@@ -12,26 +12,22 @@ $(document).ready(function() {
     });
 
     function addTask(task) {
-        const $li = $('<li></li>').text("🏷️ " + task).attr('title', 'Click to delete');
+        const $todoDiv = $('<div></div>').text(task);
 
-        $li.click(function() {
+        $todoDiv.click(function() {
             if (confirm('Do you want to delete this TO DO?')) {
-                $li.next('hr').remove(); // remove the hr after the li
-                $li.remove();
+                $todoDiv.remove();
                 saveTasks();
             }
         });
 
-        const $hr = $('<hr>');
-
-        // Prepend HR then LI to top
-        $todoList.prepend($hr).prepend($li);
+        $todoList.prepend($todoDiv);
     }
 
     function saveTasks() {
         const todos = [];
-        $todoList.children('li').each(function() {
-            todos.push($(this).text().slice(2)); // remove emoji
+        $todoList.children('div').each(function() {
+            todos.push($(this).text());
         });
         document.cookie = `tasks=${encodeURIComponent(JSON.stringify(todos))};path=/;max-age=31536000`;
     }
