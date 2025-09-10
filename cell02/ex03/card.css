@@ -1,0 +1,104 @@
+body {
+    font-family: 'Poppins', sans-serif; /* new modern font */
+    background-color: #e9f0e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-card h2 {
+    font-family: 'Poppins', sans-serif;
+    margin: 15px 0;
+    font-size: 26px;
+    color: #2d4a36;
+}
+
+.username, .student-id, .contact-button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.profile-card {
+    background-color: #d8e3d3;
+    width: 360px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    text-align: center;
+    padding: 30px 20px;
+    transition: transform 0.2s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.03);
+}
+
+.profile-card h2 {
+    margin: 15px 0;
+    font-size: 26px;
+    color: #2d4a36;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #a7c4a0;
+}
+
+.username {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2d4a36;
+}
+
+.student-id {
+    font-size: 15px;
+    color: #4b6350;
+    margin-bottom: 20px;
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    margin: 0 6px;
+    margin-top: 12px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+.contact-button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px 0;
+    background-color: #6b8e65;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #557a52;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: none;
+}
