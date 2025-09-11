@@ -1,9 +1,9 @@
-$(document).ready(function() {
-    const $todoList = $('#ft_list');
+document.addEventListener('DOMContentLoaded', function() {
+    const todoList = document.getElementById('ft_list');
 
     loadTasks();
 
-    $('#newTodoButton').click(function() {
+    document.getElementById('newTodoButton').addEventListener('click', function() {
         const task = prompt('Enter a new TO DO:');
         if (task && task.trim() !== "") {
             addTask(task);
@@ -12,28 +12,30 @@ $(document).ready(function() {
     });
 
     function addTask(task) {
-        const $li = $('<li></li>').text("🏷️ " + task).attr('title', 'Click to delete');
+        const li = document.createElement('li');
+        li.textContent = "🏷️ " + task;
+        li.title = "Click to delete";
 
-        $li.click(function() {
+        li.addEventListener('click', function() {
             if (confirm('Do you want to delete this TO DO?')) {
-                $li.next('hr').remove(); // remove the hr after the li
-                $li.remove();
+                const hr = li.nextElementSibling;
+                if (hr && hr.tagName === 'HR') hr.remove();
+                li.remove();
                 saveTasks();
             }
         });
 
-        const $hr = $('<hr>');
-
-        // Prepend HR then LI to top
-        $todoList.prepend($hr).prepend($li);
+        const hr = document.createElement('hr');
+        todoList.insertBefore(hr, todoList.firstChild);
+        todoList.insertBefore(li, hr);
     }
 
     function saveTasks() {
-        const todos = [];
-        $todoList.children('li').each(function() {
-            todos.push($(this).text().slice(2)); // remove emoji
+        const tasks = [];
+        todoList.querySelectorAll('li').forEach(li => {
+            tasks.push(li.textContent.slice(2)); // ลบ emoji
         });
-        document.cookie = `tasks=${encodeURIComponent(JSON.stringify(todos))};path=/;max-age=31536000`;
+        document.cookie = `tasks=${encodeURIComponent(JSON.stringify(tasks))};path=/;max-age=31536000`;
     }
 
     function loadTasks() {
