@@ -46,8 +46,13 @@
         padding: 20px;
         border: 2px;
         border-radius: 10px;
-        background-color: rgba(239, 209, 229, 0.6);
+        background-color: rgba(239, 222, 209, 0.6);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .user:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.4);
     }
     .profile-picture {
         width: clamp(100px, 36vw, 100px);
@@ -65,10 +70,15 @@
         padding: 10px 20px;
         font-size: 1em;
         color: #fff;
-        background-color: #007bff;
+        background-color: #b9854b;
         border: none;
         border-radius: 5px;
         text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .port-button:hover {
+    background-color: #a97a44;
+    transform: scale(1.05);
     }
 </style>
 
