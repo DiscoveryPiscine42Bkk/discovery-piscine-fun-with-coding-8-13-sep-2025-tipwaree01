@@ -1,0 +1,165 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fff0f6;
+  color: #000;
+  padding-top: 100px;
+}
+
+/*navigation bar ที่เฟี้ยวที่สุดในสามโลก*/
+.navbar {
+  border-radius: 2rem;
+  padding: 0.7rem 2rem;
+  background-color: #000;
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.navbar-brand {
+  font-weight: bold;
+  color: #ff90c2;
+}
+.navbar-brand:hover {
+  color: #ff90c2;
+  text-decoration: none;
+}
+.navbar-nav {
+  gap: 1rem;
+}
+.navbar-nav .nav-link {
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+.navbar-nav .nav-link:hover {
+  color: #ff90c2;
+}
+
+
+/*About Me*/
+#about {
+  padding: 4rem 1rem;
+  background: #fff0f6;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.about img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #7a5544;
+}
+.about-text {
+  max-width: 400px;
+  background: #7a5544;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+.speech {
+  background: #000;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.about-text h2 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #ff90c2;
+}
+.about-text p {
+  margin-bottom: 1rem;
+}
+.about-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+.about-text ul li {
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+/*bullet points สีชมพูว*/
+.about-text ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff90c2;
+  font-weight: bold;
+}
+
+/*Show cases*/
+#showcase {
+  background: #fff;
+  padding: 3rem 1rem;
+}
+#showcase h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #ff90c2;
+}
+.showcase-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.showcase-card {
+  border: 3px solid #000;
+  border-radius: 1rem;
+  background: #fff0f6;
+  transition: transform 0.2s ease;
+}
+.showcase-card:hover {
+  transform: translateY(-5px);
+}
+.showcase-card .card-title {
+  font-weight: bold;
+  color: #000;
+}
+
+/*Contact*/
+#contact {
+  background: #000;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.contact h2 {
+  font-family: "Press Start 2P", monospace;
+  font-size: 12rem;
+  margin-bottom: 1rem;
+  color: #ff90c2;
+}
+.contact p {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-size: 3rem;
+}
+.socials a img {
+  width: 80px;
+  height: 80px;
+}
+.socials a {
+  text-decoration: none;
+  transition: 0.45s;
+}
+.socials a:hover {
+  color: #ff90c2;
+  transform: scale(1.2);
+}
